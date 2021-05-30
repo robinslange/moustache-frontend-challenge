@@ -14,7 +14,7 @@
       </div>
 
       <div>
-        <v-card-text style="padding: 0;" class="descText">
+        <v-card-text style="padding: 0;" class="lightFontColor">
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Aliquam id eros mi. Nulla eu sapien nec
           turpis mollis laoreet. Donec accumsan, mauris non pellentesque
@@ -22,8 +22,8 @@
           erat.
         </v-card-text>
         <div class="my-8 mx-0">
-          <span class="text-uppercase text-gray-400 text-xs font-bold">
-            Size<span style="color: #C90000">*</span>:
+          <span class="text-uppercase lightFontColor text-xs font-bold">
+            Size&nbsp;<span style="color: #C90000">*</span>:
           </span>
 
           <SizeSelector @selected="setSize" :size="size" />

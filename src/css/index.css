@@ -12,6 +12,6 @@
     --header : #F6F6F7
 }
 
-.descText {
+.lightFontColor {
     color : var(--font-light);
 }

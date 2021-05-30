@@ -49,11 +49,11 @@ export default {
 
 <style lang="postcss" scoped>
 .selected {
-  border: 1px solid #222222;
+  border: 2px solid #222222;
   color: #222222;
 }
 .notSelected {
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   color: #cccccc;
 }
 </style>
