@@ -1,6 +1,6 @@
 <template>
   <div
-    class="my-2 mobile:px-8 flex flex-row desktop:flex-nowrap mobile:flex-wrap justify-center"
+    class="my-2 desktop:py-0 mobile:py-8 flex flex-row desktop:flex-nowrap mobile:flex-wrap justify-center"
   >
     <div>
       <v-img max-width="500" :src="require('@/assets/classic-tee.jpg')" />
