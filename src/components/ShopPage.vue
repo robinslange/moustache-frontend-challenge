@@ -39,19 +39,13 @@
         </v-btn>
       </div>
     </div>
-    <error-alert />
-    <success-alert />
   </div>
 </template>
 
 <script>
-import ErrorAlert from "./misc/ErrorAlert.vue";
-import SuccessAlert from "./misc/SuccessAlert.vue";
 export default {
   components: {
     SizeSelector: () => import("@/components/items/SizeSelector"),
-    ErrorAlert,
-    SuccessAlert,
   },
   name: "ShopPage",
 

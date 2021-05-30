@@ -2,13 +2,13 @@
   <v-snackbar
     v-model="err"
     color="error"
-    class="my-2"
+    class="my-12"
     width="300"
     app
-    timeout="2000"
-    centered
+    dismissible
+    timeout="2500"
     top
-    absolute
+    fixed
   >
     {{ errMsg }}
   </v-snackbar>

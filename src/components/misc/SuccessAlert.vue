@@ -2,13 +2,13 @@
   <v-snackbar
     v-model="success"
     color="success"
-    class="my-2"
+    class="my-12"
     width="300"
     app
     dismissible
     timeout="2500"
     top
-    absolute
+    fixed
   >
     {{ successMsg }}
   </v-snackbar>

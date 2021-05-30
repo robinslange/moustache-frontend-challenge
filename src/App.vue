@@ -1,14 +1,14 @@
 <template>
   <v-app>
-    <v-app-bar flat color="#F6F6F7" height="50px" app>
-      <v-spacer />
+    <v-app-bar flat color="#F6F6F7" height="50px" fixed>
       <v-menu
         right
         v-model="cartOpen"
         rounded="0"
         offset-y
+        nudge-right="200px"
         :close-on-content-click="false"
-        :open-on-hover="$vuetify.breakpoint.xs"
+        :open-on-hover="!$vuetify.breakpoint.xs"
         transition="slide-y-transition"
       >
         <template v-slot:activator="{ on, attrs }">
@@ -18,6 +18,8 @@
             v-on="on"
             v-bind="attrs"
             tile
+            absolute
+            right
             depressed
             :icon="$vuetify.breakpoint.xs"
           >
@@ -44,6 +46,8 @@
 
     <v-main app class="place-items-center pa-0">
       <v-card flat>
+        <error-alert />
+        <success-alert />
         <ShopPage />
       </v-card>
     </v-main>
@@ -58,6 +62,8 @@ export default {
   name: "MoustacheStore",
   // they only sell t-shirts though, no moustaches :(
   components: {
+    ErrorAlert: () => import("@/components/misc/ErrorAlert"),
+    SuccessAlert: () => import("@/components/misc/SuccessAlert"),
     ShopPage,
     MiniCart: () => import("@/components/cart/MiniCart"),
   },
