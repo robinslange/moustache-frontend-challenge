@@ -1,20 +1,20 @@
 <template>
   <div
-    class="py-8 my-2 flex flex-row desktop:flex-nowrap mobile:flex-wrap justify-center"
+    class="my-2 mobile:px-8 flex flex-row desktop:flex-nowrap mobile:flex-wrap justify-center"
   >
     <div>
       <v-img max-width="500" :src="require('@/assets/classic-tee.jpg')" />
     </div>
     <div class="desktop:w-3/12 px-2">
-      <div class="my-4">
+      <div class="my-4 text-xl">
         Classic Tee
       </div>
-      <div class="font-bold text-gray-800 my-4">
+      <div class="font-bold text-gray-800 my-4 text-sm">
         $75.00
       </div>
 
       <div>
-        <v-card-text style="padding: 0;" class=" text-gray-400">
+        <v-card-text style="padding: 0;" class="descText">
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Aliquam id eros mi. Nulla eu sapien nec
           turpis mollis laoreet. Donec accumsan, mauris non pellentesque

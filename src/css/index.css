@@ -3,3 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{ 
+    --font-light: #888888;
+    --font-dark: #222222;
+    --required: #c90000;
+    --border-light: #cccccc;
+    --border-dark: #222222;
+    --header : #F6F6F7
+}
+
+.descText {
+    color : var(--font-light);
+}

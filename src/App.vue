@@ -27,7 +27,7 @@
             <span v-else> My Cart ({{ cart.length }}) </span>
           </v-btn>
         </template>
-        <v-card elevation="2" tile class="bg-gray-50 my-0 py-0">
+        <v-card elevation="2" tile class="my-0 py-0">
           <div v-if="cart.length === 0">
             <v-card-subtitle>Your Cart is Empty</v-card-subtitle>
           </div>
