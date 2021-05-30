@@ -5,7 +5,7 @@
     class="my-2"
     width="300"
     app
-    dismissible
+    timeout="2000"
     centered
     top
     absolute

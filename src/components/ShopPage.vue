@@ -37,10 +37,10 @@
         >
           Add to Cart
         </v-btn>
-        <error-alert />
-        <success-alert />
       </div>
     </div>
+    <error-alert />
+    <success-alert />
   </div>
 </template>
 

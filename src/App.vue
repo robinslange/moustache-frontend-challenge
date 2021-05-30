@@ -9,6 +9,7 @@
         offset-y
         :close-on-content-click="false"
         :open-on-hover="$vuetify.breakpoint.xs"
+        transition="slide-y-transition"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -20,12 +21,13 @@
             depressed
             :icon="$vuetify.breakpoint.xs"
           >
+            <!-- I used span instead of div as spans are better for inlined HTML stuctures, a div creates linebreaks -->
             <span class="lightFontColor">
               <span v-if="$vuetify.breakpoint.xs">
                 <v-icon>mdi-cart</v-icon>
                 ({{ cart.length }})
               </span>
-              <span else> My Cart ({{ cart.length }}) </span>
+              <span v-else> My Cart ({{ cart.length }}) </span>
             </span>
           </v-btn>
         </template>
@@ -40,8 +42,10 @@
       </v-menu>
     </v-app-bar>
 
-    <v-main class="place-items-center pa-0">
-      <ShopPage />
+    <v-main app class="place-items-center pa-0">
+      <v-card flat>
+        <ShopPage />
+      </v-card>
     </v-main>
   </v-app>
 </template>

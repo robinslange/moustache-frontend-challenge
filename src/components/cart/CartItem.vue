@@ -10,14 +10,14 @@
         />
       </div>
       <div class="px-2">
-        <div class="text-gray-500 my-2">
+        <div class="lightFontColor my-2">
           {{ item.item }}
         </div>
-        <span class="text-gray-600 flex-row inline">
+        <span class="lightFontColor flex-row inline">
           {{ item.quantity }}x
-          <span class="font-bold text-gray-600">${{ item.price }}</span>
+          <span class="font-bold darkFontColor">${{ item.price }}</span>
         </span>
-        <div class="text-gray-500  my-2">Size: {{ item.size }}</div>
+        <div class="lightFontColor my-2">Size: {{ item.size }}</div>
       </div>
     </div>
   </v-card>
