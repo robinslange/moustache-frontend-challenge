@@ -6,10 +6,10 @@
       <v-img max-width="500" :src="require('@/assets/classic-tee.jpg')" />
     </div>
     <div class="desktop:w-3/12 px-2">
-      <div class="my-4 text-xl">
+      <div class="my-4 text-xl darkFontColor">
         Classic Tee
       </div>
-      <div class="font-bold text-gray-800 my-4 text-sm">
+      <div class="font-bold darkFontColor my-4 text-sm">
         $75.00
       </div>
 
@@ -23,7 +23,7 @@
         </v-card-text>
         <div class="my-8 mx-0">
           <span class="text-uppercase lightFontColor text-xs font-bold">
-            Size&nbsp;<span style="color: #C90000">*</span>:
+            Size&nbsp;<span class="required">*</span>:
           </span>
 
           <SizeSelector @selected="setSize" :size="size" />
@@ -37,25 +37,21 @@
         >
           Add to Cart
         </v-btn>
-        <v-alert
-          v-model="err"
-          type="error"
-          class="my-2"
-          width="300"
-          app
-          dismissible
-        >
-          {{ errMsg }}
-        </v-alert>
+        <error-alert />
+        <success-alert />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ErrorAlert from "./misc/ErrorAlert.vue";
+import SuccessAlert from "./misc/SuccessAlert.vue";
 export default {
   components: {
     SizeSelector: () => import("@/components/items/SizeSelector"),
+    ErrorAlert,
+    SuccessAlert,
   },
   name: "ShopPage",
 
@@ -82,9 +78,9 @@ export default {
           quantity: 1,
         };
         this.$store.commit("ADD_TO_CART", payload);
+        this.$store.dispatch("addedToCartAlert", payload);
       } else {
-        this.err = true;
-        this.errMsg = "No Size Selected!";
+        this.$store.dispatch("noSizeSelectedAlert");
       }
     },
   },

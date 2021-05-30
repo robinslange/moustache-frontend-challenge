@@ -20,11 +20,13 @@
             depressed
             :icon="$vuetify.breakpoint.xs"
           >
-            <span v-if="$vuetify.breakpoint.xs">
-              <v-icon>mdi-cart</v-icon>
-              ({{ cart.length }})
+            <span class="lightFontColor">
+              <span v-if="$vuetify.breakpoint.xs">
+                <v-icon>mdi-cart</v-icon>
+                ({{ cart.length }})
+              </span>
+              <span else> My Cart ({{ cart.length }}) </span>
             </span>
-            <span v-else> My Cart ({{ cart.length }}) </span>
           </v-btn>
         </template>
         <v-card elevation="2" tile class="my-0 py-0">

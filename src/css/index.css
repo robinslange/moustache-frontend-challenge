@@ -15,3 +15,23 @@
 .lightFontColor {
     color : var(--font-light);
 }
+
+.darkFontColor {
+    color: var(--font-dark);
+}
+
+.required {
+    color: var(--required);
+}
+
+.borderDark {
+    border-color: var(--border-dark);
+}
+
+.borderLight {
+    border-color: var(--border-light);
+}
+
+.headerColor {
+    background-color: var(--header);
+}
